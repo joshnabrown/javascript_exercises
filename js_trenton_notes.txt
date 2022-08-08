@@ -1,0 +1,65 @@
+Python: Creating a Variable
+x = 1
+
+JavaScript:
+let x = 1(Can be changed dependent on the scope in which it's called)
+var x = 1(Always Mutable, able to be changed)
+const x = 1(Immutable, cannot be changed)
+
+------------------------------------------------------------------------
+
+Python: Booleans
+True False
+
+JavaScript:
+true false
+
+------------------------------------------------------------------------
+
+Python: Data Types
+integers = 1
+float = 1.25
+None = empty
+string = 'Name'
+list = []
+dictionary = {}
+tuple = ()
+
+JavaScript:
+numbers = 1, 1.235
+string = 'Name'
+arrays = []
+objects = {}
+null = empty
+NaN = Not a Number(typeOf will return type of 'Number')
+
+------------------------------------------------------------------------
+
+Python: Loop Types
+for in loop = for item in list:
+while loop = while x < number:
+
+
+JavaScript:
+for loop = for (iterator = 0; iterator < list.length; incrementor++) { }
+for in loop = for (item in list) { }
+while loop = while (var x < number) { }
+
+------------------------------------------------------------------------
+
+Python: Operators
+= Assignment Operator
+== Comparison Operator
+and
+or
+
+JavaScript:
+= Assignment Operator
+== Comparison Operator
+=== Strict Comparison Operator(Checks value and type)
+>== Strict(Checks value and type)
+<== Strict(Checks value and type)
+&& is and
+|| is or
+
+------------------------------------------------------------------------
