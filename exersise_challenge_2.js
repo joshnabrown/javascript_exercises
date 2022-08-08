@@ -12,11 +12,11 @@ class Vehicle {
         this.broken = broken;
     }
 
-    static canDriveOnRoad(running) {
-        console.log(running.broken)
+    static canDriveOnRoad(vehicle) {
+        console.log(vehicle.broken)
 
 
-        if (running.broken == false) {
+        if (vehicle.broken == false) {
             return 'You are driving on the road.'
         }
         return 'You can\'t go anywhere'
@@ -33,13 +33,15 @@ class Car extends Vehicle {
 }
 
 class Truck extends Vehicle {
-    constructor(motor, doors, broken, tow,) {
+    constructor(motor, doors, broken, tow = false, fourWheelDrive = false) {
         super(motor, doors, broken);
         this.tow = tow;
+        this.fourWheelDrive = fourWheelDrive;
     }
 
-    fourWheelDriveOn() {
-        return 'Four wheel drive activated.';
+    toggleFourWheelDrive() {
+        this.fourWheelDrive = !this.fourWheelDrive;
+        return this.fourWheelDrive ? "4 wheel drive on" : "4 wheel drive off";
     }
 }
 
@@ -50,10 +52,13 @@ const red = new Vehicle('160 hp', 2, false)
 const blueCar = new Car('140 hp', 4, false, "Trunk", "Sun Roof")
 const redCar = new Car('200 hp', 2, false, "Hatch", "Drop Top")
 
-const greenTruck = new Truck('350 hp', 2, false, 'Can Tow')
-const brokenTruck = new Truck('0 hp', 2, true, 'Can\'t tow')
+const greenTruck = new Truck('350 hp', 2, false, true)
+const brokenTruck = new Truck('0 hp', 2, true)
 
 console.log(Vehicle.canDriveOnRoad(red))
 console.log(Vehicle.canDriveOnRoad(redCar))
 console.log(Vehicle.canDriveOnRoad(greenTruck))
 console.log(Vehicle.canDriveOnRoad(brokenTruck))
+
+console.log(greenTruck.toggleFourWheelDrive())
+console.log(greenTruck.toggleFourWheelDrive())
